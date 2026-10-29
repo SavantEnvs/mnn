@@ -1,0 +1,9 @@
+project: savantenvs/mnn
+target: fuzz_module
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_module/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_module
+    libfuzzer: true
+    timeout: 10
